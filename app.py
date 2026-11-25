@@ -96,6 +96,35 @@ CSS = """<style>
   .cn-preview{height:230px;}
 }
 </style>"""
+/* FIX CAMERA BUTTON */
+[data-testid="stCameraInput"] button {
+    background-color: #2A6845 !important;
+    color: #FFFFFF !important;
+    border: 1px solid #2A6845 !important;
+    border-radius: 10px !important;
+    min-height: 44px !important;
+    font-weight: 650 !important;
+}
+
+[data-testid="stCameraInput"] button * {
+    color: #FFFFFF !important;
+}
+
+[data-testid="stCameraInput"] button:hover {
+    background-color: #194B32 !important;
+}
+
+/* FIX RADIO LABEL */
+[data-testid="stRadio"] label,
+[data-testid="stRadio"] label p {
+    color: #203E2C !important;
+}
+
+/* FIX UPLOAD LABEL */
+[data-testid="stFileUploader"] label,
+[data-testid="stFileUploader"] small {
+    color: #203E2C !important;
+}
 st.markdown(CSS, unsafe_allow_html=True)
 logo_markup = (f'<img alt="Logo Chú Năm" src="data:image/png;base64,{base64.b64encode(LOGO.read_bytes()).decode()}"/>' if LOGO.exists() else '<span style="font-size:3rem">🥭</span>')
 st.markdown(f'<div class="cn-brand-wrap"><div class="cn-brand">{logo_markup}<div><h1>Chú Năm Vựa Xoài</h1><div class="cn-slogan">Chọn xoài đừng để xoài &quot;Thâm&quot;</div></div><span class="cn-tag">PHÂN LOẠI XOÀI · AI</span></div></div>', unsafe_allow_html=True)
