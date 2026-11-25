@@ -145,7 +145,6 @@ CSS = """<style>
 
 st.markdown(CSS, unsafe_allow_html=True)
 
-}
 </style>"""
 
 logo_markup = (f'<img alt="Logo Chú Năm" src="data:image/png;base64,{base64.b64encode(LOGO.read_bytes()).decode()}"/>' if LOGO.exists() else '<span style="font-size:3rem">🥭</span>')
