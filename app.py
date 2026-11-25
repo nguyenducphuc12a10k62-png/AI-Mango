@@ -94,8 +94,6 @@ CSS = """<style>
   .cn-metric-label{font-size:.7rem;}
   .cn-metric-value{font-size:1.28rem;}
   .cn-preview{height:230px;}
-  
-  .cn-preview{height:230px;}
 }
 
 /* ================================ */
@@ -145,7 +143,6 @@ CSS = """<style>
 
 st.markdown(CSS, unsafe_allow_html=True)
 
-</style>"""
 
 logo_markup = (f'<img alt="Logo Chú Năm" src="data:image/png;base64,{base64.b64encode(LOGO.read_bytes()).decode()}"/>' if LOGO.exists() else '<span style="font-size:3rem">🥭</span>')
 st.markdown(f'<div class="cn-brand-wrap"><div class="cn-brand">{logo_markup}<div><h1>Chú Năm Vựa Xoài</h1><div class="cn-slogan">Chọn xoài đừng để xoài &quot;Thâm&quot;</div></div><span class="cn-tag">PHÂN LOẠI XOÀI · AI</span></div></div>', unsafe_allow_html=True)
